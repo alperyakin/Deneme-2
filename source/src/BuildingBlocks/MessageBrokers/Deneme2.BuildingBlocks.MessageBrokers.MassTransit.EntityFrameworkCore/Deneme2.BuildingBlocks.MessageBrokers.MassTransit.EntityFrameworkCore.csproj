@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="MassTransit.EntityFrameworkCore"  />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Deneme2.BuildingBlocks.MessageBrokers.MassTransit\Deneme2.BuildingBlocks.MessageBrokers.MassTransit.csproj" />
+  </ItemGroup>
+</Project>

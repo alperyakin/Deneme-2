@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\BuildingBlocks\BackgroundJobs\Deneme2.BuildingBlocks.BackgroundJobs.Quartz\Deneme2.BuildingBlocks.BackgroundJobs.Quartz.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Caching\Deneme2.BuildingBlocks.Caching.Redis\Deneme2.BuildingBlocks.Caching.Redis.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Database\Deneme2.BuildingBlocks.Database.PostgreSQL\Deneme2.BuildingBlocks.Database.PostgreSQL.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Layers\Infrastructure\Deneme2.BuildingBlocks.Persistence\Deneme2.BuildingBlocks.Persistence.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\MessageBrokers\Deneme2.BuildingBlocks.MessageBrokers.MassTransit\Deneme2.BuildingBlocks.MessageBrokers.MassTransit.csproj" />
+		<ProjectReference Include="..\..\..\Host\Deneme2.Services.Info\Deneme2.Services.Info.csproj" />
+		<ProjectReference Include="..\Deneme2.Services.ProductService.Application\Deneme2.Services.ProductService.Application.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="MassTransit.RabbitMQ" />
+	</ItemGroup>
+</Project>

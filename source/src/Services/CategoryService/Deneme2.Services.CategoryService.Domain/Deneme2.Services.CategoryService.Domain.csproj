@@ -1,0 +1,5 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\BuildingBlocks\Layers\Domain\Deneme2.BuildingBlocks.Domain\Deneme2.BuildingBlocks.Domain.csproj" />
+	</ItemGroup>
+</Project>

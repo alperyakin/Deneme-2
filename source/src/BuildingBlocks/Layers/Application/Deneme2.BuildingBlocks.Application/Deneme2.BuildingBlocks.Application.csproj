@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Caching\Deneme2.BuildingBlocks.Caching.Base\Deneme2.BuildingBlocks.Caching.Base.csproj" />
+		<ProjectReference Include="..\..\Domain\Deneme2.BuildingBlocks.Domain\Deneme2.BuildingBlocks.Domain.csproj" />
+		<ProjectReference Include="..\Deneme2.BuildingBlocks.Application.Shared\Deneme2.BuildingBlocks.Application.Shared.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions"/>
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions"/>
+		<PackageReference Include="MediatR"  />
+	</ItemGroup>
+</Project>

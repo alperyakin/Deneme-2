@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+	<ItemGroup>
+		<PackageReference Include="Carter"/>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" >
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\BuildingBlocks\Database\Deneme2.BuildingBlocks.Database.Migrator\Deneme2.BuildingBlocks.Database.Migrator.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\Layers\Presentation\Deneme2.BuildingBlocks.Presentation\Deneme2.BuildingBlocks.Presentation.csproj" />
+		<ProjectReference Include="..\..\..\BuildingBlocks\OpenTelemetry\Deneme2.BuildingBlocks.OpenTelemetry.Base\Deneme2.BuildingBlocks.OpenTelemetry.Base.csproj" />
+		<ProjectReference Include="..\Deneme2.Services.StockService.Persistence\Deneme2.Services.StockService.Persistence.csproj" />
+	</ItemGroup>
+</Project>

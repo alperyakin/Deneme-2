@@ -1,0 +1,7 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+	  <ProjectReference Include="..\..\..\BuildingBlocks\Layers\Application\Deneme2.BuildingBlocks.Application\Deneme2.BuildingBlocks.Application.csproj" />
+	  <ProjectReference Include="..\..\..\BuildingBlocks\MessageBrokers\Deneme2.BuildingBlocks.MessageBrokers.Base\Deneme2.BuildingBlocks.MessageBrokers.Base.csproj" />
+	  <ProjectReference Include="..\Deneme2.Services.CategoryService.Domain\Deneme2.Services.CategoryService.Domain.csproj" />
+  </ItemGroup>
+</Project>

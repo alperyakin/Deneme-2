@@ -13,6 +13,7 @@ public sealed class Category : EntityBase<CategoryId>
         Id = productId;
         Name = name;
     }
+
     public CategoryName Name { get; private set; }
 
     public static Result<Category> Create(

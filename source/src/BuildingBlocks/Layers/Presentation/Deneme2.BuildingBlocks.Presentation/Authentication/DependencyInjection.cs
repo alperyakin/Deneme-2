@@ -7,7 +7,7 @@ public static class DependencyInjection
     public static IServiceCollection AddKeycloakJwtBearer(
         this IServiceCollection services,
         string keycloakServiceId = "keycloak",
-        string realm = "Deneme2")
+        string realm = "product")
     {
         services
            .AddAuthorization()

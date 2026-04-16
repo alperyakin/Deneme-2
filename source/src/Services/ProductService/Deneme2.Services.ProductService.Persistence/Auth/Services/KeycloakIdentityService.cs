@@ -8,7 +8,7 @@ public class KeycloakIdentityService
 {
     private readonly IKeycloakApi _keycloakApi;
     private readonly ILogger<KeycloakIdentityService> _logger;
-    private const string Realm = "products";
+    private const string Realm = "product";
 
     public KeycloakIdentityService(IKeycloakApi keycloakApi, ILogger<KeycloakIdentityService> logger)
     {
@@ -26,7 +26,7 @@ public class KeycloakIdentityService
             {
                 { "username", request.Username },
                 { "password", request.Password },
-                { "client_id", "productservice" },
+                { "client_id", "product-api" },
                 { "grant_type", "password" }
             };
 
@@ -34,7 +34,7 @@ public class KeycloakIdentityService
             // body.Add("client_secret", "your-client-secret-here");
 
             _logger.LogInformation("Requesting token from Keycloak realm: {Realm} with client_id: {ClientId}",
-                Realm, "products-client");
+                Realm, "product-api");
 
             var tokenResponse = await _keycloakApi.GetTokenAsync(Realm, body, cancellationToken);
 

@@ -3,6 +3,7 @@ using System;
 using Deneme2.Services.StockService.Persistence.EntityFrameworkCore.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Deneme2.Services.StockService.Persistence.EntityFrameworkCore.Migrations.ApplicationWrite
 {
     [DbContext(typeof(ApplicationWriteDbContext))]
-    partial class ApplicationWriteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260505131052_AddSoftDeleteAndIndexes")]
+    partial class AddSoftDeleteAndIndexes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -1,4 +1,4 @@
-﻿using MediatR;
+using MediatR;
 using Deneme2.BuildingBlocks.Caching.Base;
 using Deneme2.Services.ProductService.Domain.Products.Events;
 using Microsoft.Extensions.Logging;
@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 namespace Deneme2.Services.ProductService.Application.Products.v1.Events;
 
 internal sealed class ProductDeletedDomainEventHandler(
-    ILogger<ProductCreatedDomainEventHandler> logger,
+    ILogger<ProductDeletedDomainEventHandler> logger,
     ICacheService cacheService) : INotificationHandler<ProductDeletedDomainEvent>
 {
     private const string Tag = "products:list";

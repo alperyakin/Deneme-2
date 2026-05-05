@@ -13,8 +13,8 @@ public sealed class ProductCreatedIntegrationEventHandler(
     public async Task Consume(ConsumeContext<ProductCreatedIntegrationEvent> context)
     {
         var message = context.Message;
-        logger.LogInformation("Event alındı - Hedef StockService : ProductCreatedIntegrationEvent. ProductId: {ProductId}, Name: {Name}",
-            message.ProductId, message.Name);
+        logger.LogInformation("Event alındı - Hedef StockService : ProductCreatedIntegrationEvent. ProductId: {ProductId}",
+            message.ProductId);
 
         var stock = Stock.Create(message.ProductId, initialQuantity: 0);
         await stockCommandRepository.CreateStockAsync(stock, context.CancellationToken);

@@ -1,4 +1,4 @@
-﻿using CSharpEssentials;
+using CSharpEssentials;
 using Deneme2.Services.ProductService.Domain.Products;
 using Deneme2.Services.ProductService.Domain.Products.Fields;
 using Deneme2.Services.ProductService.Domain.Products.Parameters;
@@ -88,6 +88,38 @@ internal sealed class EfProductCommandRepository(
 
         found.Delete();
         context.Products.Remove(found);
+        await context.SaveChangesAsync(cancellationToken);
+
+        return Result.Success();
+    }
+
+    public async Task<Result> MarkAsLowStockAsync(Guid productId, CancellationToken cancellationToken = default)
+    {
+        var id = ProductId.From(productId);
+        Product? found = await context.Products
+            .Where(product => product.Id == id)
+            .FirstOrDefaultAsync(cancellationToken);
+
+        if (found is null)
+            return ProductErrors.ProductDoesNotExistError(id);
+
+        found.MarkAsLowStock();
+        await context.SaveChangesAsync(cancellationToken);
+
+        return Result.Success();
+    }
+
+    public async Task<Result> MarkAsInStockAsync(Guid productId, CancellationToken cancellationToken = default)
+    {
+        var id = ProductId.From(productId);
+        Product? found = await context.Products
+            .Where(product => product.Id == id)
+            .FirstOrDefaultAsync(cancellationToken);
+
+        if (found is null)
+            return ProductErrors.ProductDoesNotExistError(id);
+
+        found.MarkAsInStock();
         await context.SaveChangesAsync(cancellationToken);
 
         return Result.Success();

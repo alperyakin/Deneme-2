@@ -28,7 +28,7 @@ internal sealed class StockQuantityChangedDomainEventHandler(
                 notification.OldQuantity,
                 notification.NewQuantity);
 
-            await eventBus.PublishAsync(integrationEvent, cancellationToken: cancellationToken);
+            await eventBus.PublishAsync(integrationEvent, isTransactional: true, cancellationToken: cancellationToken);
         }
     }
 }

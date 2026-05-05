@@ -91,7 +91,9 @@ IResourceBuilder<ProjectResource> stockService = builder
 
 productService
     .WithReference(categoryService)
-    .WaitFor(categoryService);
+    .WaitFor(categoryService)
+    .WithReference(stockService)
+    .WaitFor(stockService);
 
 
 

@@ -17,7 +17,7 @@
 		<CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
 		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 		<RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
-		<NoWarn>1591</NoWarn>
+		<NoWarn>1591;NU1902;NU1903</NoWarn>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>

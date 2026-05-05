@@ -35,14 +35,14 @@ IResourceBuilder<PostgresServerResource> postgres = builder
     .WithLifetime(ContainerLifetime.Persistent)
     .WithDataVolume()
     .WithHealthCheck()
-    .WithPgAdmin();
+    .WithPgAdmin(pgAdmin => pgAdmin.WithLifetime(ContainerLifetime.Persistent));
 
 IResourceBuilder<RedisResource> cache = builder
     .AddRedis(redisKey)
     .WithLifetime(ContainerLifetime.Persistent)
     .WithDataVolume()
     .WithHealthCheck()
-    .WithRedisInsight();
+    .WithRedisInsight(redisInsight => redisInsight.WithLifetime(ContainerLifetime.Persistent));
 
 IResourceBuilder<RabbitMQServerResource> rabbitmq = builder
     .AddRabbitMQ(rabbitmqKey)

@@ -10,7 +10,8 @@ internal sealed class StockConfiguration : IEntityTypeConfiguration<Stock>
 {
     public void Configure(EntityTypeBuilder<Stock> builder)
     {
-        builder.EntityBaseMap();
+
+        builder.SoftDeletableEntityBaseMap<Stock, StockId>();
 
         builder
             .Property(s => s.Id)
@@ -25,7 +26,9 @@ internal sealed class StockConfiguration : IEntityTypeConfiguration<Stock>
             .IsRequired();
 
         builder.HasIndex(s => s.ProductId).IsUnique();
-
         builder.OptimisticConcurrencyVersionMap();
+
+        builder.HasIndex(x => x.ProductId);
+        builder.HasIndex(x => new { x.CreatedAt, x.IsDeleted });
     }
 }

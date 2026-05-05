@@ -5,7 +5,7 @@ using Deneme2.Services.StockService.Domain.Stocks.Fields;
 
 namespace Deneme2.Services.StockService.Domain.Stocks;
 
-public sealed class Stock : EntityBase<StockId>
+public sealed class Stock  : SoftDeletableEntityBase<StockId>
 {
     private Stock() { }
 
